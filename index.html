@@ -71,7 +71,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-[#E0EBF3]/50 p-6 rounded-lg">
                         <h3 class="text-xl font-bold text-center mb-4">«Долина смерти» между наукой и внедрением</h3>
-                        <p class="text-center text-sm mb-4 text-[#2F6999]">Разрыв между лабораторными открытиями (TRL 3-4) и промышленным производством (TRL 8-9) огромен из-за неспособности напрямую управлять биологическими процессами.</p>
+                        <p class="text-center text-sm mb-4 text-[#2F6999]">Разрыв между лабораторными открытиями и промышленным производством огромен из-за неспособности напрямую управлять биологическими процессами.</p>
                         <div class="chart-container">
                             <canvas id="valleyOfDeathChart"></canvas>
                         </div>
@@ -155,7 +155,7 @@
         new Chart(valleyOfDeathCtx, {
             type: 'bar',
             data: {
-                labels: ['Лаборатория (TRL 3-4)', 'Промышленность (TRL 8-9)'],
+                labels: [['Лаборатория', '(TRL 3-4)'], ['Промышленность', '(TRL 8-9)']],
                 datasets: [{
                     label: 'Уровень готовности технологий',
                     data: [100, 15],
@@ -178,6 +178,11 @@
                      y: {
                         grid: {
                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                size: 14
+                            }
                         }
                     }
                 },
